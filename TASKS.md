@@ -1,0 +1,23 @@
+# Supply Chain DApp Task List
+
+- [/] Create Implementation Plan <!-- id: 0 -->
+- [x] Setup Project Structure <!-- id: 1 -->
+    - [ ] Initialize Hardhat project
+    - [ ] Initialize Next.js project
+- [/] Develop Smart Contract (Tracking.sol) <!-- id: 2 -->
+    - [ ] Define data structures (Product, History)
+    - [ ] Implement `registerProduct`
+    - [ ] Implement `transferOwnership`
+    - [ ] Implement `getHistory`
+- [ ] Test Smart Contract <!-- id: 3 -->
+    - [ ] Unit tests for registration
+    - [ ] Unit tests for transfer
+    - [ ] Unit tests for history
+- [ ] Develop Frontend (Next.js) <!-- id: 4 -->
+    - [ ] Setup Web3 provider (Ethers.js/Wagmi)
+    - [ ] Create Product Registration UI
+    - [ ] Create Product Transfer UI
+    - [ ] Create Product History View
+- [ ] Integration & Validation <!-- id: 5 -->
+    - [ ] Deploy contract to local network
+    - [ ] End-to-end testing via UI

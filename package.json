@@ -1,0 +1,9 @@
+{
+  "name": "tracking-chain",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "~5.8.0"
+  }
+}
