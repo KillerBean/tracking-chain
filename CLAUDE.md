@@ -57,6 +57,36 @@ packages/
 - Networks: local simulated (hardhatMainnet, hardhatOp), Sepolia testnet
 - Sepolia requires `SEPOLIA_RPC_URL` and `SEPOLIA_PRIVATE_KEY` config vars (set via `bunx hardhat keystore set`)
 
+## Testing
+
+| Nível | O que testa | Ferramentas |
+|-------|-------------|-------------|
+| **Solidity unit** | Contrato em isolamento, invariantes, reverts | Hardhat + Foundry (`*.t.sol`) |
+| **TypeScript integration** | Fluxo completo (deploy → interact) em rede simulada | Mocha + ethers.js v6 |
+
+Sempre testar em rede local (`hardhatMainnet`) antes de fazer deploy em Sepolia.
+Cenários obrigatórios: happy path, acesso negado (non-owner), transfer de propriedade, edge cases de inputs.
+
+## Smart Contract Security
+
+- **Reentrancy**: use Checks-Effects-Interactions ou `ReentrancyGuard` (OpenZeppelin) em funções que fazem calls externas
+- **Access Control**: use `onlyOwner` / `onlyManufacturer` em todas as funções de escrita críticas
+- **Integer overflow**: Solidity 0.8+ reverte automaticamente — não use `unchecked` sem justificativa
+- **Validação de input**: sempre validar `address != address(0)` e bounds de arrays
+- **Eventos**: emitir eventos em todas as mudanças de estado para rastreabilidade off-chain
+- **Imutabilidade**: contratos deployados não podem ser atualizados — use Proxy Pattern se upgrades forem necessários
+
+## Deploy & Secrets
+
+Nunca commitar chaves privadas ou RPC URLs. Use o keystore do Hardhat:
+```bash
+bunx hardhat keystore set SEPOLIA_RPC_URL
+bunx hardhat keystore set SEPOLIA_PRIVATE_KEY
+```
+
+Deploy em Sepolia é irreversível — testar exaustivamente em rede local primeiro.
+Guardar o endereço do contrato deployado e o artifact em `ignition/deployments/`.
+
 ## Bun Preferences
 
 - Use `bun` / `bunx` instead of `npm` / `npx`
