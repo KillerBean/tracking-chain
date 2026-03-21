@@ -2,6 +2,13 @@
 
 Supply Chain DApp for product traceability on blockchain. System allows manufacturers to register products and owners to transfer ownership with immutable custody history.
 
+## Documentation
+
+- **[CLAUDE.md](./CLAUDE.md)** — Claude Code development guidelines
+- **[CHANGELOG.md](./CHANGELOG.md)** — Release notes & project milestones
+- **[PLAN.md](./PLAN.md)** — Implementation architecture & design
+- **[TODO.md](./TODO.md)** — Detailed development checklist
+
 ## Tech Stack
 
 - **Smart Contracts**: Solidity ^0.8.28, Hardhat 3
@@ -17,6 +24,7 @@ packages/
     contracts/         # Solidity contracts + Foundry tests (*.t.sol)
     test/              # TypeScript integration tests (Mocha + ethers)
     ignition/modules/  # Hardhat Ignition deployment modules
+    scripts/           # Utility scripts
   frontend/
     app/               # Next.js App Router
 ```
