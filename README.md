@@ -6,8 +6,9 @@ Supply Chain DApp for product traceability on blockchain. System allows manufact
 
 - **[CLAUDE.md](./CLAUDE.md)** — Claude Code development guidelines
 - **[CHANGELOG.md](./CHANGELOG.md)** — Release notes & project milestones
-- **[PLAN.md](./PLAN.md)** — Implementation architecture & design
-- **[TODO.md](./TODO.md)** — Detailed development checklist
+- **[docs/PLAN.md](./docs/PLAN.md)** — Implementation architecture & design
+- **[docs/TODO.md](./docs/TODO.md)** — Detailed development checklist
+- **[docs/NEXT-STEPS-2026-03-21.md](./docs/NEXT-STEPS-2026-03-21.md)** — 8-phase implementation roadmap with security focus
 
 ## Tech Stack
 

@@ -17,6 +17,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.1] - 2026-03-30
+
+### Changed
+
+- **Documentation Structure**
+  - Moved documentation files (`PLAN.md`, `TASKS.md`, `TODO.md`) to `docs/` directory
+  - Enhanced `.gitignore` with additional common artifacts
+
+### Added
+
+- **Documentation**
+  - `docs/NEXT-STEPS-2026-03-21.md`: Comprehensive 8-phase implementation roadmap with detailed checklists for smart contract, tests, deployment, frontend, E2E testing, and security audits
+
+### Fixed
+
+- Improved project organization by consolidating docs into dedicated directory
+
+---
+
 ## [0.1.0] - 2026-03-17
 
 ### Added
