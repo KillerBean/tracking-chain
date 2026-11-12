@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Frontend: bump `next` and `eslint-config-next` to 16.1.7
+- Update TypeScript and Bun types
+
+### Security
+
+- Add dependency overrides to fix vulnerabilities in transitive dependencies; refresh `bun.lock`
+
+### Removed
+
+- Stop versioning `node_modules` of the blockchain package; ignore `node_modules` in all packages
+
 ### Planned
 
 - Smart Contract (`Tracking.sol`): Product registration, ownership transfer, history tracking
